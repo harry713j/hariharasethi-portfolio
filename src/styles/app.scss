@@ -1,0 +1,9 @@
+@use "_fonts" as *;
+@use "_colors" as *;
+
+.app {
+  h1 {
+    @include font_jetMono(500, 32px);
+    color: $electron;
+  }
+}
