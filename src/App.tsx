@@ -1,9 +1,10 @@
+import { Layout } from "./components/index.ts";
 import "./styles/app.scss";
 
 function App() {
   return (
     <div className="app">
-      <h1>Harihara Sethi</h1>
+      <Layout />
     </div>
   );
 }

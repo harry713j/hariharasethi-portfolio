@@ -1,0 +1,9 @@
+@use "../../styles/colors" as *;
+@use "../../styles/fonts" as *;
+@use "../../styles/breakpoints" as *;
+
+.image__container {
+  & .hero__image {
+    /* The hero image CSS styles to be written */
+  }
+}
