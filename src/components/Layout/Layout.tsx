@@ -1,6 +1,13 @@
+import { Footer, Navbar } from "../index";
+
 function Layout() {
   return (
-    <div className="text-center text-3xl text-electron">Harihara Sethi</div>
+    <div className="">
+      <main>
+        <Navbar />
+        <Footer />
+      </main>
+    </div>
   );
 }
 

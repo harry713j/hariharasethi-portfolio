@@ -26,7 +26,6 @@ export default {
         JetMono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
       },
       colors: {
-        // dark: "#144351",
         dark: "#222831",
         white: "#eef7ff",
         highlight: "#ffe872",
