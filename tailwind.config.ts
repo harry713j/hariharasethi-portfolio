@@ -27,6 +27,8 @@ export default {
       },
       colors: {
         dark: "#222831",
+        grey: "#3F4959",
+        dark_grey: "#34373E",
         white: "#eef7ff",
         highlight: "#ffe872",
         turquoise: "#40e0d0",
