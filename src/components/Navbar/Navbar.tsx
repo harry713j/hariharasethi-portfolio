@@ -46,6 +46,7 @@ function Navbar() {
   return (
     <header className="fixed w-[90%] xl:top-4 md:top-3 top-2 left-1/2 -translate-x-1/2">
       <div className="relative flex items-center justify-between rounded-sm shadow bg-dark_grey xl:px-[2rem] xl:py-3 md:px-[1.5rem] md:py-2 px-4 py-1.5">
+        {/* TODO: Fix the logo for smaller screen below 480px */}
         <div className="flex items-center">
           <img src={logo} alt="harry" className="w-full object-cover" />
         </div>
@@ -68,7 +69,7 @@ function Navbar() {
           </ul>
           <section
             onClick={() => setIsNavMenuOpen(!isNavMenuOpen)}
-            className={`min-[900px]:opacity-0 min-[900px]:invisible transition-opacity ease-in-out cursor-pointer active::bg-[#40444a] hover:outline hover:outline-[0.5px] hover:outline-white/50 ${
+            className={`min-[900px]:opacity-0 min-[900px]:invisible transition-opacity ease-in-out cursor-pointer active:bg-[#40444a] hover:outline hover:outline-[0.5px] hover:outline-white/50 ${
               isNavMenuOpen ? "outline outline-[0.5px] outline-white/50" : ""
             } px-2 py-2.5 rounded-xl`}
           >
