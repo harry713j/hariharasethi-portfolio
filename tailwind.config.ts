@@ -38,16 +38,14 @@ export default {
       willChange: {
         filter: "filter",
       },
-      backgroundImage: {
-        "custom-radial-gradient": `radial-gradient(circle farthest-side at 0 100%, #00ccb1, transparent),
-                                   radial-gradient(circle farthest-side at 100% 0, #7b61ff, transparent),
-                                   radial-gradient(circle farthest-side at 100% 100%, #ffc414, transparent),
-                                   radial-gradient(circle farthest-side at 0 0, #1ca0fb, #141316)`,
-      },
+      backgroundImage: {},
       boxShadow: {
         "neu-morphic": "1px 1px 3px 2px #29303B, -1px -1px 3px 2px #29303B",
         "neu-morphic-hover":
           "0.5px 0.5px 2px 0.5px #ffe872, -0.5px -0.5px 2px 0.5px #ffe872",
+      },
+      dropShadow: {
+        "text-shadow": "0 0.5px 0.5px rgb(255, 232, 114)",
       },
     },
   },

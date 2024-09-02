@@ -44,7 +44,7 @@ function Navbar() {
   }, []);
 
   return (
-    <header className="fixed w-[90%] xl:top-4 md:top-3 top-2 left-1/2 -translate-x-1/2">
+    <header className="fixed z-50 w-[90%] xl:top-4 md:top-3 top-2 left-1/2 -translate-x-1/2">
       <div className="relative flex items-center justify-between rounded-sm shadow bg-dark_grey xl:px-[2rem] xl:py-3 md:px-[1.5rem] md:py-2 px-4 py-1.5">
         {/* TODO: Fix the logo for smaller screen below 480px */}
         <div className="flex items-center">
