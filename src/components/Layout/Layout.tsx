@@ -1,4 +1,4 @@
-import { Footer, Navbar, About, Hero } from "../index";
+import { Footer, Navbar, About, Hero, Skills } from "../index";
 
 function Layout() {
   return (
@@ -8,13 +8,7 @@ function Layout() {
         <div className="w-full flex flex-col items-center xl:gap-[7rem] lg:gap-[6rem] md:gap-[5rem] sm:gap-[3rem] gap-[2rem]">
           <Hero />
           <About />
-          <section id="skills" className="mb-8 text-electron">
-            To show an active state for the navbar link corresponding to the
-            currently visible section, you can implement scroll event handling
-            in React. When the user scrolls through the page, we'll detect which
-            section is in view and apply an "active" class to the corresponding
-            navbar link.
-          </section>
+          <Skills />
           <section id="projects" className="mb-8 text-turquoise">
             Contrary to popular belief, Lorem Ipsum is not simply random text.
             It has roots in a piece of classical Latin literature from 45 BC,
