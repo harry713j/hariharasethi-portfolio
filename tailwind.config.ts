@@ -47,6 +47,20 @@ export default {
       },
       dropShadow: {
         "text-shadow": "0 0.5px 0.5px rgb(255, 232, 114)",
+        card: "0 2px 2px #ffe872",
+      },
+      animation: {
+        "meteor-effect": "meteor 5s linear infinite",
+      },
+      keyframes: {
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
       },
     },
   },

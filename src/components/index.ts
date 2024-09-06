@@ -4,3 +4,4 @@ export { default as Navbar } from "./Navbar/Navbar.tsx";
 export { default as About } from "./About/About.tsx";
 export { default as Hero } from "./Hero/Hero.tsx";
 export { default as Skills } from "./Skills/Skills.tsx";
+export { default as Projects } from "./Projects/Projects.tsx";
