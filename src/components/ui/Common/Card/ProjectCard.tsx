@@ -12,7 +12,7 @@ function ProjectCard({
   console.log(githubLink, url);
 
   return (
-    <div className="relative bg-[#111827] w-full h-full shadow-md rounded-xl group/card transition duration-300 ease-in hover:drop-shadow-card ">
+    <div className="bg-[#111827] w-full h-full shadow-md rounded-xl group/card transition duration-300 ease-in hover:drop-shadow-card ">
       <div className="w-full h-[45%] ">
         <div
           className={`overflow-hidden relative rounded-t-lg card h-full shadow-xl  w-full mx-auto backgroundImage flex flex-col justify-between p-4 object-cover`}
@@ -25,7 +25,7 @@ function ProjectCard({
           <div className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-50"></div>
         </div>
       </div>
-      <div className="relative h-[55%] flex flex-col justify-between xl:px-3 xl:py-4 lg:py-3.5 lg:px-2.5 md:py-3 md:px-2.5 sm:px-3 sm:py-4 px-2.5 py-3.5 ">
+      <div className="relative overflow-hidden h-[55%] flex flex-col justify-between xl:px-3 xl:py-4 lg:py-3.5 lg:px-2.5 md:py-3 md:px-2.5 sm:px-3 sm:py-4 px-2.5 py-3.5 ">
         <div className="flex flex-col h-[70%] items-start justify-between lg:py-1.5 lg:gap-2 md:py-1 md:gap-1.5 sm:py-1.5 sm:gap-2 py-1 gap-2 ">
           <h3 className="font-JetMono transition duration-300 ease-in font-bold text-transparent bg-gradient-to-t from-pink-200 to-white/80 bg-clip-text capitalize group-hover/card:bg-gradient-to-t group-hover/card:from-highlight group-hover/card:to-white  xl:text-lg lg:text-[17px] md:text-base sm:text-[17px] text-base ">
             {projectTitle}
@@ -73,7 +73,8 @@ function ProjectCard({
             </span>
           </button>
         </div>
-        {/* <Meteors /> */}
+
+        <Meteors className="" number={30} />
       </div>
     </div>
   );
