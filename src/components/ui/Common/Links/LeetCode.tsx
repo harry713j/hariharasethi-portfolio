@@ -13,7 +13,7 @@ function LeetCode({
 }: SocialLinkProps) {
   return (
     <div
-      className={`${className} group lg:w-14 md:w-12 sm:w-[44px] w-10 rounded-lg bg-inherit cursor-pointer shadow-neu-morphic flex items-center justify-center p-2 transition-shadow hover:shadow-neu-morphic-hover`}
+      className={`${className} group lg:w-14 md:w-12 sm:w-[44px] w-10 rounded-lg bg-inherit cursor-pointer shadow-neu-morphic flex items-center justify-center p-2 transition-shadow `}
     >
       <a href={href} target={target} rel={rel} className="inline-block w-full">
         <svg

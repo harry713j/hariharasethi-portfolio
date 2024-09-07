@@ -7,3 +7,4 @@ export { default as LinkedIn } from "./Common/Links/LinkedIn";
 export { default as GitHub } from "./Common/Links/GitHub";
 export { default as SkillCard } from "./Common/Card/SkillCard";
 export { default as ProjectCard } from "./Common/Card/ProjectCard";
+export { default as Alert } from "./Common/Alert/Alert";

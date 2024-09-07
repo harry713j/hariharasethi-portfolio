@@ -1,4 +1,12 @@
-import { Footer, Navbar, About, Hero, Skills, Projects } from "../index";
+import {
+  Footer,
+  Navbar,
+  About,
+  Hero,
+  Skills,
+  Projects,
+  Contact,
+} from "../index";
 
 function Layout() {
   return (
@@ -10,13 +18,7 @@ function Layout() {
           <About />
           <Skills />
           <Projects />
-          <section id="contact" className="mb-8 text-white">
-            To show an active state for the navbar link corresponding to the
-            currently visible section, you can implement scroll event handling
-            in React. When the user scrolls through the page, we'll detect which
-            section is in view and apply an "active" class to the corresponding
-            navbar link.
-          </section>
+          <Contact />
         </div>
         <Footer />
       </main>

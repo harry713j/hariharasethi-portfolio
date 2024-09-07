@@ -118,7 +118,7 @@ function Hero() {
             />
           </span>
           <span>
-            <p className="font-JetMono text-white/80 xl:text-lg lg:text-[17px] md:text-base sm:text-[15px] text-sm min-[320px]:text-[13px]">
+            <p className="select-none font-JetMono text-white/80 xl:text-lg lg:text-[17px] md:text-base sm:text-[15px] text-sm min-[320px]:text-[13px]">
               Hello there! I'm Harihara Sethi, a self-taught MERN Stack
               Developer. I enjoy creating web applications and solving problems
               through code. Welcome to my portfolio!

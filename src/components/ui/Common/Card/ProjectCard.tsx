@@ -1,4 +1,3 @@
-import { cn } from "../../../utils/utils";
 import { Meteors } from "../../meteor";
 import { ProjectCardProps } from "../../../Projects/Projects";
 
@@ -30,7 +29,7 @@ function ProjectCard({
           <h3 className="font-JetMono transition duration-300 ease-in font-bold text-transparent bg-gradient-to-t from-pink-200 to-white/80 bg-clip-text capitalize group-hover/card:bg-gradient-to-t group-hover/card:from-highlight group-hover/card:to-white  xl:text-lg lg:text-[17px] md:text-base sm:text-[17px] text-base ">
             {projectTitle}
           </h3>
-          <p className="font-JetMono font-light text-white/70 xl:text-xs lg:text-[11px] md:text-[10px] sm:text-[11px] text-[10px]">
+          <p className="select-none font-JetMono font-light transition-colors duration-500 ease-linear text-white/30 group-hover/card:text-[#CCC7AC] xl:text-xs lg:text-[11px] md:text-[10px] sm:text-[11px] text-[10px]">
             {description}
           </p>
         </div>
@@ -64,11 +63,22 @@ function ProjectCard({
           </a>
           <button
             onClick={() => window.open(url, "_blank", "noopener noreferrer")}
-            className="relative inline-flex items-center justify-start lg:px-3 lg:py-1.5 md:px-2.5 md:py-[5px] sm:px-2.5 sm:py-1.5 px-2 py-1 overflow-hidden font-medium transition-all bg-white rounded-full hover:bg-white group"
+            className={`relative inline-flex items-center justify-start lg:px-3 lg:py-1.5 md:px-2.5 md:py-[5px] sm:px-2.5 sm:py-1.5 px-2 py-1 overflow-hidden font-medium transition-all rounded-full group ${
+              url ? "bg-white hover:bg-white" : " bg-white/70 "
+            } `}
             disabled={url ? false : true}
           >
-            <span className="w-48 h-48 rounded-full rotate-[-40deg] bg-electron absolute bottom-0 left-0 -translate-x-full ease-in-out duration-500 transition-transform translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
-            <span className="relative capitalize font-JetMono font-semibold w-full text-left text-electron transition-colors duration-300 ease-in-out group-hover:text-white/90 lg:text-base md:text-sm sm:text-[15px] text-sm ">
+            {url && (
+              <span className="w-48 h-48 rounded-full rotate-[-40deg] bg-electron absolute bottom-0 left-0 -translate-x-full ease-in-out duration-500 transition-transform translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+            )}
+
+            <span
+              className={`${
+                url
+                  ? "relative text-electron transition-colors duration-300 ease-in-out group-hover:text-white/90 "
+                  : "text-gray-500"
+              }  capitalize font-JetMono font-semibold w-full text-left lg:text-base md:text-sm sm:text-[15px] text-sm `}
+            >
               preview
             </span>
           </button>

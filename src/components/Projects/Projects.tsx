@@ -53,7 +53,7 @@ function Projects() {
           {projects.map((project) => (
             <span
               key={project.projectTitle}
-              className="inline-block xl:h-[30rem] xl:w-[25rem] lg:h-[29rem] lg:w-[22.5rem] min-[816px]:h-[26rem] min-[816px]:w-[20rem] md:h-[25rem] md:w-[29rem] sm:h-[24rem] sm:w-[27rem] h-[22rem] w-[24rem] min-[320px]:h-[24rem] min-[320px]:w-[19rem] "
+              className="inline-block xl:h-[30rem] xl:w-[25rem] lg:h-[29rem] lg:w-[22.5rem] min-[816px]:h-[26rem] min-[816px]:w-[20rem] md:h-[25rem] md:w-[29rem] sm:h-[27rem] sm:w-[27rem] h-[26rem] w-[24rem] min-[320px]:h-[28rem] min-[320px]:w-[19rem] "
             >
               <ProjectCard
                 projectTitle={project.projectTitle}

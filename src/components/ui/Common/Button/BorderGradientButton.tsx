@@ -7,11 +7,15 @@ function cn(...classes: any[]) {
 type ButtonProps = {
   gradient: string;
   children: React.ReactNode;
+  onClick: React.MouseEventHandler<HTMLDivElement>;
 };
 
-function BorderGradientButton({ gradient, children }: ButtonProps) {
+function BorderGradientButton({ gradient, children, onClick }: ButtonProps) {
   return (
-    <div className="w-full flex justify-center cursor-pointer">
+    <div
+      className="w-full flex justify-center cursor-pointer"
+      onClick={onClick}
+    >
       <div className="relative w-full lg:h-10 md:h-9 sm:h-8 h-7 group ">
         <div
           className={cn(
@@ -26,7 +30,7 @@ function BorderGradientButton({ gradient, children }: ButtonProps) {
               gradient
             )}
           >
-            <span className="flex items-center justify-center w-full h-full px-6 bg-turquoise/40 text-white font-JetMono font-bold lg:text-lg md:text-base sm:text-[15px] text-sm rounded-md">
+            <span className="flex capitalize items-center justify-center w-full h-full px-6 bg-turquoise/40 text-white font-JetMono font-bold lg:text-lg md:text-base sm:text-[15px] text-sm rounded-md">
               {children}
             </span>
           </span>
