@@ -23,6 +23,7 @@ function Contact() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [alertKey, setAlertKey] = useState(0);
 
   const onSubmit = async () => {
     setIsLoading(true);
@@ -31,29 +32,28 @@ function Contact() {
 
     try {
       if (!formValue.email || !formValue.name || !formValue.message) {
-        setError("Please provide all the fields");
         setIsLoading(false);
+        setError("Please provide all the fields");
+        setAlertKey((key) => key + 1);
         return;
       }
 
       if (!/^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-Z]{2,}$/.test(formValue.email)) {
-        setError("Please provide a valid email");
         setIsLoading(false);
+        setError("Please provide a valid email");
+        setAlertKey((key) => key + 1);
         return;
       }
 
-      const response = await sendEmail(
-        formValue.name,
-        formValue.email,
-        formValue.message
-      );
-      console.log("Email response: ", response);
+      await sendEmail(formValue.name, formValue.email, formValue.message);
+
       setSuccess("Email sent successfully");
 
       setFormValue({ name: "", email: "", message: "" });
     } catch (err: any) {
       console.error("Error sending email", err);
       setError("Error while sending email");
+      setAlertKey((key) => key + 1);
     } finally {
       setIsLoading(false);
     }
@@ -156,18 +156,17 @@ function Contact() {
           </div>
         </div>
       </div>
-      <span
-        className={` transition-opacity duration-300 ease-in ${
-          error ? "opacity-100 visible" : "opacity-0 invisible"
-        } `}
-      ></span>
-      <span
-        className={` transition-opacity duration-300 ease-in ${
-          success ? "opacity-100 visible" : "opacity-0 invisible"
-        } `}
-      ></span>
-      {success && <Alert message={success} messageType="SUCCESS" />}
-      {error && <Alert message={error} messageType="ERROR" />}
+
+      {success && (
+        <Alert
+          key={`success-${alertKey}`}
+          message={success}
+          messageType="SUCCESS"
+        />
+      )}
+      {error && (
+        <Alert key={`error-${alertKey}`} message={error} messageType="ERROR" />
+      )}
     </section>
   );
 }

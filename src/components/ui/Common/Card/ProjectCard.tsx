@@ -8,8 +8,6 @@ function ProjectCard({
   githubLink,
   url,
 }: ProjectCardProps) {
-  console.log(githubLink, url);
-
   return (
     <div className="bg-[#111827] w-full h-full shadow-md rounded-xl group/card transition duration-300 ease-in hover:drop-shadow-card ">
       <div className="w-full h-[45%] ">
