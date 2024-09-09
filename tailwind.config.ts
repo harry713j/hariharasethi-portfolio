@@ -55,8 +55,9 @@ export default {
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
-        "stroke-animation": "stroke 3s infinite alternate",
-        "vader-animation": "vader 3s ease-in-out infinite alternate",
+        "vader-animation": "vader 2s linear infinite alternate",
+        "dotted-line": "dash 2s linear infinite",
+        beep: "appear 6.5s ease-in",
       },
       keyframes: {
         meteor: {
@@ -67,38 +68,27 @@ export default {
             opacity: "0",
           },
         },
-        stroke: {
-          "0%": {
-            fill: "transparent",
-            stroke: "#00dfa2",
-            strokeWidth: "0.5",
-            strokeDashoffset: "25%",
-            strokeDasharray: "0 32%",
-          },
-          "50%": {
-            fill: "transparent",
-            stroke: "#00dfa2",
-            strokeWidth: "0.5",
-          },
-          "80%": {
-            fill: "#00dfa2",
-            stroke: "transparent",
-            strokeWidth: "0",
-            strokeDashoffset: "-25%",
-            strokeDasharray: "32% 0",
-          },
-          "100%": {
-            fill: "#00dfa2",
-            stroke: "transparent",
-            strokeWidth: "0",
-            strokeDashoffset: "-25%",
-            strokeDasharray: "32% 0",
-          },
-        },
+
         vader: {
           to: {
             strokeDashoffset: "0",
           },
+        },
+        dash: {
+          from: {
+            strokeDashoffset: "0",
+          },
+          to: {
+            strokeDashoffset: "6.3",
+          },
+        },
+        appear: {
+          "0%": { opacity: "0", visibility: "hidden" },
+          "10%": { opacity: "0", visibility: "hidden" },
+          "20%": { opacity: "0", visibility: "hidden" },
+          "30%": { opacity: "1", visibility: "visible" },
+          "70%": { opacity: "1", visibility: "visible" },
+          "100%": { opacity: "1", visibility: "visible" },
         },
       },
     },
