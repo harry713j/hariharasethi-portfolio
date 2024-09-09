@@ -12,7 +12,7 @@ This is my personal portfolio website built with React.js. It showcases my proje
    ```
 2. Navigate to the project directory:
    ```bash
-   cd portfolio-website
+   cd hariharasethi-portfolio
    ```
 3. Install all dependencies:
    ```bash
