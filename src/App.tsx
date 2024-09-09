@@ -2,7 +2,7 @@ import { Layout } from "./components/index.ts";
 
 function App() {
   return (
-    <div className="bg-dark min-h-screen ">
+    <div className="bg-dark min-h-screen">
       <Layout />
     </div>
   );

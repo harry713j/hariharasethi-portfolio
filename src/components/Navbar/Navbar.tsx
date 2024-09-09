@@ -45,13 +45,12 @@ function Navbar() {
 
   return (
     <header className="fixed z-50 w-[90%] xl:top-4 md:top-3 top-2 left-1/2 -translate-x-1/2">
-      <div className="relative flex items-center justify-between rounded-sm shadow bg-dark_grey xl:px-[2rem] xl:py-3 md:px-[1.5rem] md:py-2 px-4 py-1.5">
-        {/* TODO: Fix the logo for smaller screen below 480px */}
-        <div className="flex items-center">
-          <img src={logo} alt="harry" className="w-full object-cover" />
+      <div className="relative flex items-center justify-between rounded-sm shadow bg-dark_grey xl:px-[2rem] xl:py-3 md:px-[1.5rem] md:py-2 px-4 py-1.5 min-[320px]:px-2 ">
+        <div className="flex items-center xl:w-[8%] lg:w-[10%] md:w-[11%] sm:w-[13%] w-[16%]">
+          <img src={logo} alt="harry" className="w-full object-cover " />
         </div>
         <nav className="flex items-center">
-          <ul className="opacity-0 invisible transition-opacity ease-in-out flex min-[900px]:opacity-100 min-[900px]:visible min-[900px]:items-center xl:gap-8 lg:gap-6 min-[900px]:gap-5">
+          <ul className="opacity-0 invisible hidden transition-opacity ease-in-out min-[900px]:flex min-[900px]:opacity-100 min-[900px]:visible min-[900px]:items-center xl:gap-8 lg:gap-6 min-[900px]:gap-5">
             {navItems.map((item) => (
               <li
                 key={item.name}
@@ -97,10 +96,8 @@ function Navbar() {
           </section>
 
           <ul
-            className={`absolute md:px-8 md:py-2 sm:px-6 px-4 py-1 bg-dark_grey top-full left-0 w-full transition-all flex flex-col min-[900px]:opacity-0 min-[900px]:invisible items-center justify-center rounded-b delay-100 duration-500 ease-in-out ${
-              isNavMenuOpen
-                ? "-translate-y-0 opacity-100 visible"
-                : "-translate-y-16 opacity-0 invisible "
+            className={`absolute md:px-8  sm:px-6 px-4 bg-dark_grey top-full left-0 w-full transition-all overflow-hidden flex flex-col min-[900px]:opacity-0 min-[900px]:invisible items-center justify-center rounded-b delay-100 duration-500 ease-in-out ${
+              isNavMenuOpen ? "max-h-60 py-4" : "max-h-0 py-0"
             }`}
           >
             {navItems.map((item) => (

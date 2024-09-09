@@ -1,5 +1,4 @@
 import React from "react";
-
 import { SkillCard } from "../ui";
 
 type SkillProps = {
@@ -137,7 +136,7 @@ function Skills() {
               href={skill.href}
               target="_blank"
               rel="noopner noreferrer"
-              className="xl:w-[6.25rem] xl:h-[6.25rem] lg:w-[5rem] lg:h-[5rem] md:w-[4.5rem] md:h-[4.5rem] sm:w-[4rem] sm:h-[4rem] w-[3.5rem] h-[3.5rem] "
+              className="xl:w-[6.25rem] xl:h-[6.25rem] lg:w-[5.75rem] lg:h-[5.75rem] md:w-[5.25rem] md:h-[5.25rem] sm:w-[4.75rem] sm:h-[4.75rem] w-[4.25rem] h-[4.25rem] "
             >
               <SkillCard name={skill.name} src={skill.src} />
             </a>

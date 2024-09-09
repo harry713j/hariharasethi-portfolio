@@ -55,6 +55,8 @@ export default {
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
+        "stroke-animation": "stroke 3s infinite alternate",
+        "vader-animation": "vader 3s ease-in-out infinite alternate",
       },
       keyframes: {
         meteor: {
@@ -63,6 +65,39 @@ export default {
           "100%": {
             transform: "rotate(215deg) translateX(-500px)",
             opacity: "0",
+          },
+        },
+        stroke: {
+          "0%": {
+            fill: "transparent",
+            stroke: "#00dfa2",
+            strokeWidth: "0.5",
+            strokeDashoffset: "25%",
+            strokeDasharray: "0 32%",
+          },
+          "50%": {
+            fill: "transparent",
+            stroke: "#00dfa2",
+            strokeWidth: "0.5",
+          },
+          "80%": {
+            fill: "#00dfa2",
+            stroke: "transparent",
+            strokeWidth: "0",
+            strokeDashoffset: "-25%",
+            strokeDasharray: "32% 0",
+          },
+          "100%": {
+            fill: "#00dfa2",
+            stroke: "transparent",
+            strokeWidth: "0",
+            strokeDashoffset: "-25%",
+            strokeDasharray: "32% 0",
+          },
+        },
+        vader: {
+          to: {
+            strokeDashoffset: "0",
           },
         },
       },

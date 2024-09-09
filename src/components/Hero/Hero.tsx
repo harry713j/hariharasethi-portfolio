@@ -4,6 +4,8 @@ import { TypewriterEffect } from "../ui/typewriter-effect";
 
 import hero from "/main-illustration.svg";
 
+// TODO: Add animation to SVG
+
 function Hero() {
   const sentences = useMemo(
     () => [
@@ -94,11 +96,11 @@ function Hero() {
   const words = sentences[currentSentenceIndex];
 
   return (
-    <section
-      id="home"
-      className="w-[100%] z-10 bg-transparent relative overflow-y-hidden"
-    >
+    <section id="home" className="w-[100%] z-10 bg-transparent mb-4">
       <div className="w-full flex min-[860px]:flex-row min-[860px]:gap-0 gap-8 flex-col-reverse items-center justify-between">
+        <div className="w-full absolute inset-0 h-[80vh]">
+          <BackgroundBeams />
+        </div>
         <div className="lg:w-1/2 min-[860px]:w-3/5 flex flex-col items-start xl:gap-5 md:gap-4 sm:gap-3 gap-2.5">
           <span className="flex flex-col justify-start xl:gap-3 sm:gap-2.5 gap-2">
             <h1 className="font-JetMono font-extrabold xl:text-4xl lg:text-3xl sm:text-2xl text-xl min-[320px]:text-[17px]">
@@ -129,7 +131,6 @@ function Hero() {
           <img src={hero} alt="hero-image" className="w-full" />
         </div>
       </div>
-      <BackgroundBeams />
     </section>
   );
 }

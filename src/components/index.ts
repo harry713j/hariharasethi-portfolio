@@ -6,3 +6,4 @@ export { default as Hero } from "./Hero/Hero.tsx";
 export { default as Skills } from "./Skills/Skills.tsx";
 export { default as Projects } from "./Projects/Projects.tsx";
 export { default as Contact } from "./Contact/Contact.tsx";
+export { default as Loader } from "./LoadingScreen/LoadingScreen.tsx";
