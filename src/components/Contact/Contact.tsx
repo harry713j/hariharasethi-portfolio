@@ -62,11 +62,10 @@ function Contact() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       transition={{
-        duration: 0.5,
-        delay: 0.2,
+        duration: 0.3,
         ease: "easeIn",
       }}
       viewport={{ once: true }}
