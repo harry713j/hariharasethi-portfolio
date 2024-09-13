@@ -1,5 +1,6 @@
 import React from "react";
 import { SkillCard } from "../ui";
+import { motion } from "framer-motion";
 
 type SkillProps = {
   href: string;
@@ -124,26 +125,38 @@ function Skills() {
     []
   );
   return (
-    <section id="skills" className="w-[96%] flex justify-center bg-dark">
-      <div className="w-full flex flex-col items-center xl:gap-10 lg:gap-9 md-gap-8 sm-gap-7 gap-5">
-        <h2 className="font-JetMono font-bold text-turquoise xl:text-[28px] lg:text-[26px] md:text-2xl sm:text-xl text-lg">
-          Skills
-        </h2>
-        <div className="flex flex-wrap justify-center xl:gap-8 lg:gap-7 md:gap-6 sm:gap-5 gap-4 ">
-          {skills.map((skill) => (
-            <a
-              key={skill.name}
-              href={skill.href}
-              target="_blank"
-              rel="noopner noreferrer"
-              className="xl:w-[6.25rem] xl:h-[6.25rem] lg:w-[5.75rem] lg:h-[5.75rem] md:w-[5.25rem] md:h-[5.25rem] sm:w-[4.75rem] sm:h-[4.75rem] w-[4.25rem] h-[4.25rem] "
-            >
-              <SkillCard name={skill.name} src={skill.src} />
-            </a>
-          ))}
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{
+        duration: 0.3,
+        delay: 0.2,
+        ease: "easeIn",
+      }}
+      viewport={{ once: true }}
+      className="w-full h-full flex justify-center"
+    >
+      <section id="skills" className="w-[96%] flex justify-center bg-dark">
+        <div className="w-full flex flex-col items-center xl:gap-10 lg:gap-9 md-gap-8 sm-gap-7 gap-5">
+          <h2 className="font-JetMono font-bold text-turquoise xl:text-[28px] lg:text-[26px] md:text-2xl sm:text-xl text-lg">
+            Skills
+          </h2>
+          <div className="flex flex-wrap justify-center xl:gap-8 lg:gap-7 md:gap-6 sm:gap-5 gap-4 ">
+            {skills.map((skill) => (
+              <a
+                key={skill.name}
+                href={skill.href}
+                target="_blank"
+                rel="noopner noreferrer"
+                className="xl:w-[6.25rem] xl:h-[6.25rem] lg:w-[5.75rem] lg:h-[5.75rem] md:w-[5.25rem] md:h-[5.25rem] sm:w-[4.75rem] sm:h-[4.75rem] w-[4.25rem] h-[4.25rem] "
+              >
+                <SkillCard name={skill.name} src={skill.src} />
+              </a>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </motion.div>
   );
 }
 
