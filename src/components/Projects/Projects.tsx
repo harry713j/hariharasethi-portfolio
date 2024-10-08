@@ -9,6 +9,22 @@ export type ProjectCardProps = {
 };
 const projects: ProjectCardProps[] = [
   {
+    projectTitle: "Ezy Resume",
+    description:
+      "Ezy resume Builder is a user-friendly online resume builder with beautiful UI powered by Material UI. It has different template for creating resume. The app has authentication feature with both credential and OAuth Google supported by Firebase. Form handled proficiently with react-hook-form and styling the components with SCSS.",
+    projectImage: "https://i.imgur.com/7Ay0Bun.png",
+    url: "https://ezy-resume.netlify.app/",
+    githubLink: "https://github.com/harry713j/ezy-resume-builder",
+  },
+  {
+    projectTitle: "auth with nextJS",
+    description:
+      "This Next.js app is dedicated to mastering authentication, token management, and cookie handling. It implements secure user authentication flows, including token-based authorization and session management with cookies. The app demonstrates best practices for protecting sensitive data, ensuring secure user sessions, and managing user state efficiently. ",
+    projectImage: "https://i.imgur.com/TK66hlj.png",
+    url: "",
+    githubLink: "https://github.com/harry713j/auth-with-nextJS",
+  },
+  {
     projectTitle: "Resume lite",
     description:
       "Resume Lite is a user friendly online resume builder developed with React. It offers a seamless experience for crafting professional resumes effortlessly. With intuitive interface and dynamic routing, users can easily navigate between sections like personal details, education, work experience, and more. ",
@@ -31,14 +47,6 @@ const projects: ProjectCardProps[] = [
     projectImage: "https://i.imgur.com/xRiZ7WP.png",
     url: "https://musiccourse.vercel.app/",
     githubLink: "https://github.com/harry713j/music-course-app-nextJS",
-  },
-  {
-    projectTitle: "auth with nextJS",
-    description:
-      "This Next.js app is dedicated to mastering authentication, token management, and cookie handling. It implements secure user authentication flows, including token-based authorization and session management with cookies. The app demonstrates best practices for protecting sensitive data, ensuring secure user sessions, and managing user state efficiently. ",
-    projectImage: "https://i.imgur.com/TK66hlj.png",
-    url: "",
-    githubLink: "https://github.com/harry713j/auth-with-nextJS",
   },
 ];
 
