@@ -9,6 +9,14 @@ export type ProjectCardProps = {
 };
 const projects: ProjectCardProps[] = [
   {
+    projectTitle: "Anonymous Feedback",
+    description:
+      "Anonymous Feedback is a web application where users can receive feedback from others anonymously. The app ensures privacy for feedback providers while giving users the ability to authenticate and secure their accounts through email verification. It is built with modern tools and a clean UI for seamless user experience.",
+    projectImage: "https://i.imgur.com/AP0NrhX.png",
+    url: "https://anonymous-feedback-lilac.vercel.app/",
+    githubLink: "https://github.com/harry713j/anonymous-feedback",
+  },
+  {
     projectTitle: "Ezy Resume",
     description:
       "Ezy resume Builder is a user-friendly online resume builder with beautiful UI powered by Material UI. It has different template for creating resume. The app has authentication feature with both credential and OAuth Google supported by Firebase. Form handled proficiently with react-hook-form and styling the components with SCSS.",
